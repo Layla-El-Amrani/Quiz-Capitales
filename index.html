@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bd">
+    <div id="page1">
+        <div class="btn"><button id="btn" onclick="start()">Let's start</button></div>
+    </div>
+    <h2 class="time">Time: <span id='timer'></span></h2>
+    <h2 class="score">Score: <span id='score'></span></h2>
+    <h2 class="questions"><span id='questions'>0\10</span></h2>
+
+    <!-- Question 1 -->
+    <div id="question1" style="display: none">
+        <h1>What is the capital of France?</h1>
+        <div><img src="bg6.avif" alt="" width="100px" height="100px"></div>
+        <div class="container">
+            <button id="btn1" onclick="statue1()" class="btn1" name="stopButton">Madrid</button>
+
+            <button id="btn2" onclick="statue2()" class="btn2" name="stopButton">Rome</button>
+
+            <button id="btn3" onclick="statue3()" class="btn3" name="stopButton">Paris</button>
+
+            <div><button class="next" onclick="next1()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div id="question2" style="display: none">
+        <h1 id="title1">What is the capital of Germany?</h1>
+        <div class="container">
+            <button id="btn1q2" onclick="statue1q2()" class="btn1" name="stopButton">Berlin</button>
+
+            <button id="btn2q2" onclick="statue2q2()" class="btn2" name="stopButton">Amsterdam</button>
+
+            <button id="btn3q2" onclick="statue3q2()" class="btn3" name="stopButton">Prague</button>
+
+            <div><button class="next" onclick="next2()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div id="question3" style="display: none">
+        <h1 id="title3">What is the capital of Italy?</h1>
+        <div class="container">
+            <button id="btn1q3" onclick="statue1q3()" class="btn1" name="stopButton">Rome</button>
+
+            <button id="btn2q3" onclick="statue2q3()" class="btn2" name="stopButton">Athens</button>
+
+            <button id="btn3q3" onclick="statue3q3()" class="btn3" name="stopButton">Lisbon</button>
+
+            <div><button class="next" onclick="next3()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div id="question4" style="display: none">
+        <h1 id="title4">What is the capital of the United States?</h1>
+        <div class="container">
+            <button id="btn1q4" onclick="statue1q4()" class="btn1" name="stopButton">Los Angeles</button>
+
+            <button id="btn2q4" onclick="statue2q4()" class="btn2" name="stopButton">Washington</button>
+
+            <button id="btn3q4" onclick="statue3q4()" class="btn3" name="stopButton">Chicago</button>
+
+            <div><button class="next" onclick="next4()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div id="question5" style="display: none">
+        <h1 id="title5">What is the capital of the United Kingdom?</h1>
+        <div class="container">
+            <button id="btn1q5" onclick="statue1q5()" class="btn1" name="stopButton">Dublin</button>
+
+            <button id="btn2q5" onclick="statue2q5()" class="btn2" name="stopButton">London</button>
+
+            <button id="btn3q5" onclick="statue3q5()" class="btn3" name="stopButton">Cardiff</button>
+
+            <div><button class="next" onclick="next5()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div id="question6" style="display: none">
+        <h1 id="title6">What is the capital of Japan?</h1>
+        <div class="container">
+            <button id="btn1q6" onclick="statue1q6()" class="btn1" name="stopButton">Kyoto</button>
+
+            <button id="btn2q6" onclick="statue2q6()" class="btn2" name="stopButton">Tokyo</button>
+
+            <button id="btn3q6" onclick="statue3q6()" class="btn3" name="stopButton">Seoul</button>
+
+            <div><button class="next" onclick="next6()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div id="question7" style="display: none">
+        <h1 id="title7">What is the capital of Spain?</h1>
+        <div class="container">
+            <button id="btn1q7" onclick="statue1q7()" class="btn1" name="stopButton">Barcelona</button>
+
+            <button id="btn2q7" onclick="statue2q7()" class="btn2" name="stopButton">Valencia</button>
+
+            <button id="btn3q7" onclick="statue3q7()" class="btn3" name="stopButton">Madrid</button>
+
+            <div><button class="next" onclick="next7()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div id="question8" style="display: none">
+        <h1 id="title8">What is the capital of China?</h1>
+        <div class="container">
+            <button id="btn1q8" onclick="statue1q8()" class="btn1" name="stopButton">Shanghai</button>
+
+            <button id="btn2q8" onclick="statue2q8()" class="btn2" name="stopButton">Hong Kong</button>
+
+            <button id="btn3q8" onclick="statue3q8()" class="btn3" name="stopButton">Beijing</button>
+
+            <div><button class="next" onclick="next8()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div id="question9" style="display: none">
+        <h1 id="title9">What is the capital of Egypt?</h1>
+        <div class="container">
+            <button id="btn1q9" onclick="statue1q9()" class="btn1" name="stopButton">Cairo</button>
+
+            <button id="btn2q9" onclick="statue2q9()" class="btn2" name="stopButton">Luxor</button>
+
+            <button id="btn3q9" onclick="statue3q9()" class="btn3" name="stopButton">Aswan</button>
+
+            <div><button class="next" onclick="next9()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div id="question10" style="display: none">
+        <h1 id="title10">What is the capital of Canada?</h1>
+        <div class="container">
+            <button id="btn1q10" onclick="statue1q10()" class="btn1" name="stopButton">Ottawa</button>
+
+            <button id="btn2q10" onclick="statue2q10()" class="btn2" name="stopButton">Montreal</button>
+
+            <button id="btn3q10" onclick="statue3q10()" class="btn3" name="stopButton">Toronto</button>
+
+            <div><button class="next" onclick="next10()">Next</button></div>
+        </div>
+    </div>
+
+    <!-- Result -->
+    <div id="Resultat">
+        <h3 class="resultat"></h3>
+       <!-- <div><button class="router" onclick="router()">Next</button></div>-->
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
